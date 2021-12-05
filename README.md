@@ -38,6 +38,6 @@ Let your lex and yacc files be “hello.l” and “hello.y“. Now, follow the 
 
 ----
 #### Tutorial Links :
-* [When using lex first time(Theory Part)](https://silcnitc.github.io/lex.html)
+* [When using lex first time (Theory Part)](https://silcnitc.github.io/lex.html)
 * [pattern matches on gfg](https://www.geeksforgeeks.org/flex-fast-lexical-analyzer-generator/)
 * [Lex program to take input from file and remove multiple spaces, lines and tabs](https://www.geeksforgeeks.org/lex-program-to-take-input-from-file-and-remove-multiple-spaces-lines-and-tabs/)
