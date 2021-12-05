@@ -1,3 +1,6 @@
+This repo contains Lex &amp; Yacc code for lab practicals
+
+----
 ### Compiler Practical Using flex & Bison :
 
 IMPORTANT  
