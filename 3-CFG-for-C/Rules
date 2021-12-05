@@ -1,0 +1,122 @@
+%%
+
+program_unit      : HEADER program_unit
+					| translation_unit
+					;
+
+translation_unit     : func_defination
+                  | func_defination translation_unit
+                  | decl ';' translation_unit
+                  ;
+
+func_defination      : data_type func_name '{' body '}'
+                  ;
+
+func_name	: declarator '('		')'
+			         | declarator '(' param_list ')'
+			         ;
+
+declarator	   : pointer direct_declarator
+			   |	direct_declarator
+			   ;
+
+direct_declarator    : id
+                  ;
+
+pointer	: '*'
+			| '*' pointer
+			;
+
+param_list	   : param_decl
+			   | param_decl ',' param_list
+            ;
+
+param_decl     : data_type init_declarator
+			   ;
+
+body	   : stat_list body
+	   | decl_list body
+      |  stat_list
+	   | decl_list  
+		;
+
+decl_list	   : decl ';'
+			   | decl ';' decl_list
+			   ;
+
+decl	   : data_type init_declarator_list 
+      ;
+
+init_declarator_list	   : init_declarator
+			            | init_declarator_list ',' init_declarator
+			            ;
+
+init_declarator      : declarator
+			         | declarator '=' consts
+			         ;
+
+stat_list      : stat
+			   | stat stat_list
+            ;
+
+stat		   : selection_stat
+			| iteration_stat
+			| jump_stat
+			| exp_stat ';'
+         ;
+
+selection_stat		: 'if' '(' exp_stat ')' '{' body '}'
+			| 'if' '(' exp_stat ')' '{' body '}' 'else' '{' body '}'
+			;
+
+iteration_stat	   : 'while' '(' exp_stat ')' '{' body '}'
+               | 'do' '{' body '}' 'while' '(' exp_stat ')' ';'
+               | 'for' '(' exp_stat ';' exp_stat ';' exp_stat ')' '{' body '}'
+               | 'for' '(' exp_stat ';' exp_stat ';'	')' '{' body '}'
+               | 'for' '(' exp_stat ';'	';' exp_stat ')' '{' body '}'
+               | 'for' '(' exp_stat ';'	';'	')' '{' body '}'
+               | 'for' '('	';' exp_stat ';' exp_stat ')' '{' body '}'
+               | 'for' '('	';' exp_stat ';'	')' '{' body '}'
+               | 'for' '('	';'	';' exp_stat ')' '{' body '}'
+               | 'for' '('	';'	';'	')' '{' body '}'
+               ;
+
+jump_stat   : 'continue' ';'
+			   | 'break' ';'
+			   | 'return' exp_stat ';'
+			   | 'return'	';'
+			   ;
+
+exp_stat      : consts Assignment_operators exp_stat
+      | consts Opearators exp_stat
+      | consts '*' exp_stat
+      | consts inc_const
+      | consts
+      | consts '=' exp_stat
+      ;
+
+Opearators     : Arithmetic_operators | Relational_operators 
+            | Logical_operators | Bitwise_operators
+            ;
+
+consts	   : int_const 											
+			| char_const
+			| float_const
+         | id
+			;
+
+
+data_type   : 'void' | 'char' | 'short' | 'int' | 'long' | 'float'
+			   | 'double' | 'signed' | 'unsigned'
+            ;
+
+Assignment_operators	: '=' | '*=' | '/=' | '%=' | '+=' 
+                     | '-=' | '<<=' | '>>=' | '&=' | '^=' | '|='
+			            ;
+
+Arithmetic_operators : '+' | '-' | '/' | '*' | '%';
+Relational_operators : '<' | '<' | '<=' | '>=' | '==' | '!=';
+Logical_operators  : '||' | '&&' | '!';
+Bitwise_operators : '|' | '&' | '^' | '<<' | '>>' | '~';
+
+%%

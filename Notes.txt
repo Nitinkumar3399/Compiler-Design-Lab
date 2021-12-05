@@ -1,0 +1,46 @@
+Total Three sections :
+1. Declaration Section
+2. Translation Rules ( pattern {action} )
+3. Auxiliary functions
+
+File.l -> |lex Compiler| -> lex.yy.c
+lex.yy.c -> |C compiler| -> a.out
+I/P -> |a.out| -> output
+
+yylex() : Reads the input stream and generate tokens according
+          to the regular expression written in pattern section.
+
+yywrap() : called by lex tool when Input is exhausted.
+           Return 1 if i/p is finished else 0.
+
+yytext : Pointer to the Input string.
+
+* #include "y.tab.h" :
+This will match token declare in yacc accessible to the lex program.
+will have all the tokens used in yacc file / program.
+
+
+**********
+YACC Tool
+**********
+
+YACC : It is tool for generating LALR(1) parser.
+       It takes Input as tokens and generate a parse tree.
+
+File.y -> |Yacc Compiler| -> y.tab.c
+y.tab.c -> |C compiler| -> a.out (LALR(1) Parser)
+I/P(Tokens from LA) -> |a.out| -> output
+
+Total Three sections :
+1. Declaration Section / Tokens
+2. Rules Head : body1 {action } | body2{action}
+3. Auxiliary functions
+
+yyval : values associated with the tokens are returned by
+        lex in the variable yyval.
+yytext : Pointer to the input string.
+yywrap : called by lex or yacc when input is exhausted .
+         return 1 when I\P finished else 0.
+yyparse : responsible for parsing to occur. It reads tokens and
+          executes the actions.
+          If it gives 0 means string accepted.

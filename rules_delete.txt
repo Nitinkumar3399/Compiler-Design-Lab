@@ -1,0 +1,113 @@
+%%
+
+program_unit   : HEADER program_unit
+					| translation_unit
+					;
+
+translation_unit  : function_defination
+                  ;
+
+function_defination  : data_type func_declarator func_or_loop_body
+                     ;
+
+data_type   : type_const
+            ;
+
+func_declarator	: declarator '('		')'
+			         | declarator '(' param_list ')'
+			         ;
+
+declarator	: pointer direct_declarator
+			   |	direct_declarator
+			   ;
+
+direct_declarator : id
+                  ;
+
+param_list	: param_decl
+			   | param_decl ',' param_list
+            ;
+
+param_decl  : data_type declarator
+			   ;
+
+func_or_loop_body	: '{' decl_list stat_list  '}'
+			   | '{' stat_list   '}'
+			   | '{' decl_list   '}'
+			   | '{' '}'
+			   ;
+
+decl_list	: decl
+			   | decl ';' decl_list
+			   ;
+
+decl	: data_type init_declarator_list ';'
+
+init_declarator_list	: init_declarator
+			            | init_declarator_list ',' init_declarator
+			            ;
+
+init_declarator   : declarator
+			         | declarator '=' initializer
+			         ;
+
+stat_list   : stat
+			   | stat_list stat
+            ;
+
+stat		: func_or_loop_body
+			| selection_stat
+			| iteration_stat
+			| jump_stat
+			| exp_stat;
+
+selection_stat		: IF '(' exp ')' stat
+			| IF '(' exp ')' stat ELSE stat
+			;
+
+iteration_stat	: WHILE '(' exp ')' stat
+               | DO stat WHILE '(' exp ')' ';'
+               | FOR '(' exp ';' exp ';' exp ')' stat
+               | FOR '(' exp ';' exp ';'	')' stat
+               | FOR '(' exp ';'	';' exp ')' stat
+               | FOR '(' exp ';'	';'	')' stat
+               | FOR '('	';' exp ';' exp ')' stat
+               | FOR '('	';' exp ';'	')' stat
+               | FOR '('	';'	';' exp ')' stat
+               | FOR '('	';'	';'	')' stat
+               ;
+
+jump_stat   : CONTINUE ';'
+			   | BREAK ';'
+			   | RETURN exp ';'
+			   | RETURN	';'
+			   ;
+
+exp_stat	   : exp ';'
+			   ;
+
+exp   : consts assignment_operator exp
+      | consts Opearators exp
+      | consts
+      ;
+
+assignment_operator	: '=' | '*=' | '/=' | '%=' | '+=' 
+                     | '-=' | '<<=' | '>>=' | '&=' | '^=' | '|='
+			            ;
+
+Opearators  : Arithmetic_operators | Relational_operators 
+            | Logical_operator | Bitwise_operator
+            ;
+
+Arithmetic_operators : '+' | '-' | '/' | '*' | '%';
+Relational_operators : '<' | '<' | '<=' | '>=' | '==' | '!=';
+Logical_operator  : '||' | '&&' | '!';
+Bitwise_operator : '|' | '&' | '^' | '<<' | '>>' | '~';
+
+consts	: int_const 											
+			| char_const
+			| float_const
+         | id
+			;
+
+%%

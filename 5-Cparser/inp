@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+ 
+/* A binary tree node has data, pointer to left child
+   and a pointer to right child */
+
+int x = 6, y;
+
+int main() {
+   
+   int n = 10, i, sum=0;
+
+   for(i=1;i<=n;i++) {
+      sum += i;
+   }
+
+   sum = 0, i = 1;
+   while(i<=n) {
+      sum = sum + i;
+   }
+
+   do {
+      sum -= i;
+   } while(i>=0);
+
+   return 0;
+}
