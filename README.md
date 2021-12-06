@@ -40,7 +40,8 @@ Let your lex and yacc files be “hello.l” and “hello.y“. Now, follow the 
 #### TUTORIAL LINKS :
 * [BEST MATERIAL TO LEARN - when using LEX first time (Theory Part)](https://silcnitc.github.io/lex.html)
 * [BEST MATERIAL TO LEARN - when using LEX first time (Theory Part)](http://silcnitc.github.io/yacc.html)
-* [pattern matches on gfg](https://www.geeksforgeeks.org/flex-fast-lexical-analyzer-generator/)
+* [Introduction to LEX & pattern matches on gfg](https://www.geeksforgeeks.org/flex-fast-lexical-analyzer-generator/)
+* [Introduction of Yacc](https://www.geeksforgeeks.org/introduction-to-yacc/)
 * [Lex program to take input from file and remove multiple spaces, lines and tabs](https://www.geeksforgeeks.org/lex-program-to-take-input-from-file-and-remove-multiple-spaces-lines-and-tabs/)  
 
 **DO PROGRAMS TO UNDERSTAND MORE :**    
