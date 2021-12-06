@@ -3,12 +3,12 @@ This repo contains Lex &amp; Yacc code for lab practicals
 ----
 ### Compiler Practical Using Flex & Bison :
 
-**Procedure step by step for windows :**    
+**1.Procedure step by step for windows :**    
 If you are installing Ubuntu (or any Linux based OS) on your system either through Virtual Box or by making your system Multi-Bootable, just to execute your Lex & Yacc programs; then you might be wasting your HDD space & your valuable time. You can easily skip this annoying process and run your programs in Windows OS without any hassles.  
 
 Here’s how you can do it:  
 
-**Installing Softwares :**  
+**2.Installing Softwares :**  
 1. Download [Flex 2.5.4a](http://gnuwin32.sourceforge.net/downlinks/flex.php)  
 2. Download [Bison 2.4.1](http://downloads.sourceforge.net/gnuwin32/bison-2.4.1-setup.exe)  
 3. Install Flex at “C:\GnuWin32“  
@@ -16,7 +16,7 @@ Here’s how you can do it:
 5. Open Environment Variables.  
 6. Add “C:\GnuWin32\bin  
 
-**Compilation & Execution of your Program :**  
+**3.Compilation & Execution of your Program :**  
 
 Open Command prompt and switch to your working directory where you have stored your lex file (“.l“) and yacc file (“.y“)
 Let your lex and yacc files be “hello.l” and “hello.y“. Now, follow the preceding steps to compile and run your program.  
