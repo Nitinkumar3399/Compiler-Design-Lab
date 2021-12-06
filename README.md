@@ -3,11 +3,6 @@ This repo contains Lex &amp; Yacc code for lab practicals
 ----
 ### Compiler Practical Using flex & Bison :
 
-IMPORTANT  
-* [How to run Lex and Yacc file in windows using flex & Bison](https://www.youtube.com/watch?v=jqps7nYAkto)
-* [How to compile LEX/YACC files on Windows?](https://stackoverflow.com/questions/5456011/how-to-compile-lex-yacc-files-on-windows)
-* [Most Important Link](https://thesvgway.wordpress.com/2013/10/09/how-to-compile-run-lex-yacc-programs-on-windows/)
-
 **Procedure step by step for windows :**    
 If you are installing Ubuntu (or any Linux based OS) on your system either through Virtual Box or by making your system Multi-Bootable, just to execute your Lex & Yacc programs; then you might be wasting your HDD space & your valuable time. You can easily skip this annoying process and run your programs in Windows OS without any hassles.  
 
@@ -35,6 +30,11 @@ Let your lex and yacc files be “hello.l” and “hello.y“. Now, follow the 
 `gcc lex.yy.c y.tab.c`  
 **_For Executing the Program_**    
 `a.exe`  
+
+IMPORTANT  
+* [How to run Lex and Yacc file in windows using flex & Bison](https://www.youtube.com/watch?v=jqps7nYAkto)
+* [How to compile LEX/YACC files on Windows?](https://stackoverflow.com/questions/5456011/how-to-compile-lex-yacc-files-on-windows)
+* [Most Important Link](https://thesvgway.wordpress.com/2013/10/09/how-to-compile-run-lex-yacc-programs-on-windows/)
 
 ----
 #### TUTORIAL LINKS :
