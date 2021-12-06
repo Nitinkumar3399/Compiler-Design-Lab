@@ -37,7 +37,12 @@ Let your lex and yacc files be “hello.l” and “hello.y“. Now, follow the 
 `a.exe`  
 
 ----
-#### Tutorial Links :
-* [When using lex first time (Theory Part)](https://silcnitc.github.io/lex.html)
+#### TUTORIAL LINKS :
+* [BEST MATERIAL TO LEARN - when using LEX first time (Theory Part)](https://silcnitc.github.io/lex.html)
+* [BEST MATERIAL TO LEARN - when using LEX first time (Theory Part)](http://silcnitc.github.io/yacc.html)
 * [pattern matches on gfg](https://www.geeksforgeeks.org/flex-fast-lexical-analyzer-generator/)
-* [Lex program to take input from file and remove multiple spaces, lines and tabs](https://www.geeksforgeeks.org/lex-program-to-take-input-from-file-and-remove-multiple-spaces-lines-and-tabs/)
+* [Lex program to take input from file and remove multiple spaces, lines and tabs](https://www.geeksforgeeks.org/lex-program-to-take-input-from-file-and-remove-multiple-spaces-lines-and-tabs/)  
+
+**DO PROGRAMS TO UNDERSTAND MORE :**    
+* [YACC program to recognize string with grammar { anbn | n≥0 }](https://www.geeksforgeeks.org/yacc-program-to-recognize-string-with-grammar-anbn-n0/)
+* [LEX Programs Archive](https://www.geeksforgeeks.org/tag/lex-program/)
