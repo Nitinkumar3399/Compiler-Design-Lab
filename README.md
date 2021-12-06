@@ -1,7 +1,7 @@
 This repo contains Lex &amp; Yacc code for lab practicals
 
 ----
-### Compiler Practical Using flex & Bison :
+### Compiler Practical Using Flex & Bison :
 
 **Procedure step by step for windows :**    
 If you are installing Ubuntu (or any Linux based OS) on your system either through Virtual Box or by making your system Multi-Bootable, just to execute your Lex & Yacc programs; then you might be wasting your HDD space & your valuable time. You can easily skip this annoying process and run your programs in Windows OS without any hassles.  
